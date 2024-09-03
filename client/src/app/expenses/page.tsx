@@ -115,7 +115,6 @@ const Expenses = () => {
                                 name='start-date'
                                 className={classNames.selectInput}
                                 onChange={(e) => setStartDate(e.target.value)}>
-
                             </input>
                         </div>
 
