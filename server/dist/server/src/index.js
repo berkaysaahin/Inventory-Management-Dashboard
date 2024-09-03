@@ -22,14 +22,11 @@ app.use((0, morgan_1.default)('common'));
 app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.use((0, cors_1.default)());
-app.get('/hello', (req, res) => {
-    res.send('i rave you i rave you rave it up!');
-});
 app.use('/dashboard', dashboardRoutes_1.default);
 app.use('/products', productRoutes_1.default);
 app.use('/users', userRoutes_1.default);
 app.use('/expenses', expenseRoutes_1.default);
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
-    console.log(`kendimi öldürücem running on port ${port}`);
+    console.log(`Server running on port ${port}`);
 });

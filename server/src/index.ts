@@ -19,10 +19,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cors());
 
-app.get('/hello', (req, res) => {
-    res.send('i rave you i rave you rave it up!')
-})
-
 app.use('/dashboard', dashboardRoutes);
 app.use('/products', productRoutes);
 app.use('/users',userRoutes);
@@ -30,5 +26,5 @@ app.use('/expenses',expenseRoutes)
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
-    console.log(`kendimi öldürücem running on port ${port}`);
+    console.log(`Server running on port ${port}`);
 })

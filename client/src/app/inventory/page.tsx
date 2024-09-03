@@ -14,6 +14,7 @@ const columns: GridColDef[] = [
         width: 110,
         type: "number",
         valueGetter: (value, row) => `$${row.price}`,
+        
     },
     {
         field: "rating",
